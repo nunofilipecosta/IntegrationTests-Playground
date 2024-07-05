@@ -10,7 +10,6 @@ namespace SimpleWebApi.IntegrationTests;
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
     private readonly MsSqlContainer _dbContainer = new MsSqlBuilder()
-        .WithName("SimpleWebApiDb")
         .WithPassword("Strong_password_123!")
         .Build();
 
